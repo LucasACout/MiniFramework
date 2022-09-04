@@ -1,0 +1,27 @@
+<h1>Index</h1>
+<hr>
+
+<table class="table">
+
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#Id</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Preço</th>
+    </tr>
+  </thead>
+<?php
+  foreach($this->view->dados as $key => $value){
+?>
+  <tbody>
+    <tr>
+      <th scope="row"><?= $value['id'] ?></th>
+      <td><?= $value['descricao'] ?></td>
+      <td><?= 'R$ '. $value['preco'] ?></td>
+    </tr>
+  </tbody>
+<?php
+  }
+?>
+
+</table>
